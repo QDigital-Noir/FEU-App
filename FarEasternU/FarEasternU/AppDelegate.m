@@ -54,7 +54,7 @@
               withFinishedUnselectedImage:[UIImage imageNamed:@"icon_contact"]];
     
     // Change the title color of tab bar items
-    UIColor *titleHighlightedColor = [UIColor colorWithRed:153/255.0 green:192/255.0 blue:48/255.0 alpha:1.0];
+    UIColor *titleHighlightedColor = [UIColor colorWithRed:255/255.0f green:240/255.0f blue:0.0f alpha:1.0f];
 
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                                        titleHighlightedColor, UITextAttributeTextColor,
@@ -69,7 +69,7 @@
     [[UINavigationBar appearance] setTranslucent:NO];
     [[UINavigationBar appearance] setTitleTextAttributes:@{
                                                            UITextAttributeTextColor: [UIColor blackColor],
-                                                           UITextAttributeFont: [UIFont fontWithName:@"ThaiSansNeue-ExtraBold" size:0.0],
+                                                           UITextAttributeFont: [UIFont fontWithName:@"ThaiSansNeue-ExtraBold" size:26.0],
                                                            }];
     
     return YES;

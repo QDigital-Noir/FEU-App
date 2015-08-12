@@ -7,6 +7,14 @@
 //
 
 #import "ApplyViewController.h"
+#import "StepOneViewController.h"
+#import "StepTwoViewController.h"
+#import "StepThreeViewController.h"
+#import "StepFourViewController.h"
+#import "StepFiveViewController.h"
+#import "StepSixViewController.h"
+#import "StepSevenViewController.h"
+#import "StepApplyViewController.h"
 
 @interface ApplyViewController () <GUITabPagerDataSource, GUITabPagerDelegate>
 @property (nonatomic, strong) NSArray *titleArray;
@@ -22,7 +30,14 @@
 //    
 //    [self.tabbar setImage: [unselectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
 //    [self.tabbar setSelectedImage: selectedImage];
-    self.titleArray = @[@"ขั้นตอนการรับสมัคร", @"รายละเอียดกำหนดการ", @"คุณสมบัติและเอกสาร", @"สำหรับผู้จบปวส." @"สำหรับผู้จบสถาบันอื่น", @"สำหรับผู้จบต่างประเทศ", @"ค่าเทอม"];
+    self.titleArray = @[@"ขั้นตอนการรับสมัคร",
+                        @"รายละเอียดกำหนดการ",
+                        @"คุณสมบัติและเอกสาร",
+                        @"สำหรับผู้จบปวส.",
+                        @"สำหรับผู้จบสถาบันอื่น",
+                        @"สำหรับผู้จบต่างประเทศ",
+                        @"ค่าเทอม",
+                        @"สมัครออนไลน์"];
     [self setDataSource:self];
     [self setDelegate:self];
 }
@@ -51,16 +66,53 @@
 #pragma mark - Tab Pager Data Source
 
 - (NSInteger)numberOfViewControllers {
-    return 5;
+    return self.titleArray.count;
 }
 
 - (UIViewController *)viewControllerForIndex:(NSInteger)index {
-    UIViewController *vc = [UIViewController new];
-    [[vc view] setBackgroundColor:[UIColor colorWithRed:arc4random_uniform(255) / 255.0f
-                                                  green:arc4random_uniform(255) / 255.0f
-                                                   blue:arc4random_uniform(255) / 255.0f alpha:1]];
-    [vc.view addSubview:[self createView1]];
-    return vc;
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    if (index == 0)
+    {
+        StepOneViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"StepOneViewController"];
+        return vc;
+    }
+    else if (index == 1)
+    {
+        StepTwoViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"StepTwoViewController"];
+        return vc;
+    }
+    else if (index == 2)
+    {
+        StepThreeViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"StepThreeViewController"];
+        return vc;
+    }
+    else if (index == 3)
+    {
+        StepFourViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"StepFourViewController"];
+        return vc;
+    }
+    else if (index == 4)
+    {
+        StepFiveViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"StepFiveViewController"];
+        return vc;
+    }
+    else if (index == 5)
+    {
+        StepSixViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"StepSixViewController"];
+        return vc;
+    }
+    else if (index == 6)
+    {
+        StepSevenViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"StepSevenViewController"];
+        return vc;
+    }
+    else
+    {
+        StepApplyViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"StepApplyViewController"];
+        return vc;
+    }
 }
 
 // Implement either viewForTabAtIndex: or titleForTabAtIndex:
@@ -69,7 +121,7 @@
 //}
 
 - (NSString *)titleForTabAtIndex:(NSInteger)index {
-    return [NSString stringWithFormat:@"%@", self.titleArray[(long) index + 1]];
+    return [NSString stringWithFormat:@"%@", self.titleArray[(long) index]];
 }
 
 - (CGFloat)tabHeight {
@@ -79,22 +131,22 @@
 
 - (UIColor *)tabColor {
     // Default: [UIColor orangeColor];
-    return [UIColor purpleColor];
+    return [UIColor colorWithRed:255/255.0f green:240/255.0f blue:0.0f alpha:1.0f];
 }
 
 - (UIColor *)tabBackgroundColor {
     // Default: [UIColor colorWithWhite:0.95f alpha:1.0f];
-    return [UIColor lightTextColor];
+    return [UIColor blackColor];
 }
 
 - (UIFont *)titleFont {
     // Default: [UIFont fontWithName:@"HelveticaNeue-Thin" size:20.0f];
-    return [UIFont fontWithName:@"HelveticaNeue-Bold" size:20.0f];
+    return [UIFont fontWithName:@"ThaiSansNeue-ExtraBold" size:20.0f];
 }
 
 - (UIColor *)titleColor {
     // Default: [UIColor blackColor];
-    return [UIColor colorWithRed:1.0f green:0.8f blue:0.0f alpha:1.0f];
+    return [UIColor colorWithRed:255/255.0f green:240/255.0f blue:0.0f alpha:1.0f];
 }
 
 #pragma mark - Tab Pager Delegate

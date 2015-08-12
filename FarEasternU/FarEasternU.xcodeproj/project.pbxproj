@@ -38,6 +38,14 @@
 		1033BBE01B5C73200021BC92 /* ThaiSansNeue-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1033BBCE1B5C73200021BC92 /* ThaiSansNeue-Italic.ttf */; };
 		1033BBE11B5C73200021BC92 /* ThaiSansNeue-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1033BBCF1B5C73200021BC92 /* ThaiSansNeue-Light.ttf */; };
 		1033BBE21B5C73200021BC92 /* ThaiSansNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1033BBD01B5C73200021BC92 /* ThaiSansNeue-Regular.ttf */; };
+		1076C9111B7B94AE000F7ACF /* StepOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1076C9101B7B94AE000F7ACF /* StepOneViewController.m */; };
+		1076C9141B7B9692000F7ACF /* StepTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1076C9131B7B9692000F7ACF /* StepTwoViewController.m */; };
+		1076C9171B7B969F000F7ACF /* StepThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1076C9161B7B969F000F7ACF /* StepThreeViewController.m */; };
+		1076C91A1B7B96AC000F7ACF /* StepFourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1076C9191B7B96AC000F7ACF /* StepFourViewController.m */; };
+		1076C91D1B7B96CB000F7ACF /* StepFiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1076C91C1B7B96CB000F7ACF /* StepFiveViewController.m */; };
+		1076C9201B7B96D7000F7ACF /* StepSixViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1076C91F1B7B96D7000F7ACF /* StepSixViewController.m */; };
+		1076C9231B7B96E6000F7ACF /* StepSevenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1076C9221B7B96E6000F7ACF /* StepSevenViewController.m */; };
+		1076C9261B7BB1A4000F7ACF /* StepApplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1076C9251B7BB1A4000F7ACF /* StepApplyViewController.m */; };
 		109139681B72CEB700269DAD /* ALCustomColoredAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = 109139671B72CEB700269DAD /* ALCustomColoredAccessory.m */; };
 		1091396B1B72E02200269DAD /* CourseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1091396A1B72E02200269DAD /* CourseDetailViewController.m */; };
 		1091396E1B72E3F400269DAD /* CourseMajorDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1091396D1B72E3F400269DAD /* CourseMajorDetailViewController.m */; };
@@ -128,6 +136,22 @@
 		1033BBCE1B5C73200021BC92 /* ThaiSansNeue-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ThaiSansNeue-Italic.ttf"; sourceTree = "<group>"; };
 		1033BBCF1B5C73200021BC92 /* ThaiSansNeue-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ThaiSansNeue-Light.ttf"; sourceTree = "<group>"; };
 		1033BBD01B5C73200021BC92 /* ThaiSansNeue-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ThaiSansNeue-Regular.ttf"; sourceTree = "<group>"; };
+		1076C90F1B7B94AE000F7ACF /* StepOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepOneViewController.h; sourceTree = "<group>"; };
+		1076C9101B7B94AE000F7ACF /* StepOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepOneViewController.m; sourceTree = "<group>"; };
+		1076C9121B7B9692000F7ACF /* StepTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepTwoViewController.h; sourceTree = "<group>"; };
+		1076C9131B7B9692000F7ACF /* StepTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepTwoViewController.m; sourceTree = "<group>"; };
+		1076C9151B7B969F000F7ACF /* StepThreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepThreeViewController.h; sourceTree = "<group>"; };
+		1076C9161B7B969F000F7ACF /* StepThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepThreeViewController.m; sourceTree = "<group>"; };
+		1076C9181B7B96AC000F7ACF /* StepFourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepFourViewController.h; sourceTree = "<group>"; };
+		1076C9191B7B96AC000F7ACF /* StepFourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepFourViewController.m; sourceTree = "<group>"; };
+		1076C91B1B7B96CB000F7ACF /* StepFiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepFiveViewController.h; sourceTree = "<group>"; };
+		1076C91C1B7B96CB000F7ACF /* StepFiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepFiveViewController.m; sourceTree = "<group>"; };
+		1076C91E1B7B96D7000F7ACF /* StepSixViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepSixViewController.h; sourceTree = "<group>"; };
+		1076C91F1B7B96D7000F7ACF /* StepSixViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepSixViewController.m; sourceTree = "<group>"; };
+		1076C9211B7B96E6000F7ACF /* StepSevenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepSevenViewController.h; sourceTree = "<group>"; };
+		1076C9221B7B96E6000F7ACF /* StepSevenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepSevenViewController.m; sourceTree = "<group>"; };
+		1076C9241B7BB1A4000F7ACF /* StepApplyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepApplyViewController.h; sourceTree = "<group>"; };
+		1076C9251B7BB1A4000F7ACF /* StepApplyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepApplyViewController.m; sourceTree = "<group>"; };
 		109139631B72BB5F00269DAD /* FarEasternU-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FarEasternU-Prefix.pch"; sourceTree = "<group>"; };
 		109139661B72CEB700269DAD /* ALCustomColoredAccessory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALCustomColoredAccessory.h; sourceTree = "<group>"; };
 		109139671B72CEB700269DAD /* ALCustomColoredAccessory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALCustomColoredAccessory.m; sourceTree = "<group>"; };
@@ -268,6 +292,7 @@
 		1033BBAC1B5C70400021BC92 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				1076C90E1B7B946B000F7ACF /* ApplyDetailControllers */,
 				1033BBAD1B5C70830021BC92 /* CorseViewController.h */,
 				1033BBAE1B5C70830021BC92 /* CorseViewController.m */,
 				1033BBB01B5C709D0021BC92 /* ApplyViewController.h */,
@@ -309,6 +334,29 @@
 				1033BBD01B5C73200021BC92 /* ThaiSansNeue-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		1076C90E1B7B946B000F7ACF /* ApplyDetailControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1076C90F1B7B94AE000F7ACF /* StepOneViewController.h */,
+				1076C9101B7B94AE000F7ACF /* StepOneViewController.m */,
+				1076C9121B7B9692000F7ACF /* StepTwoViewController.h */,
+				1076C9131B7B9692000F7ACF /* StepTwoViewController.m */,
+				1076C9151B7B969F000F7ACF /* StepThreeViewController.h */,
+				1076C9161B7B969F000F7ACF /* StepThreeViewController.m */,
+				1076C9181B7B96AC000F7ACF /* StepFourViewController.h */,
+				1076C9191B7B96AC000F7ACF /* StepFourViewController.m */,
+				1076C91B1B7B96CB000F7ACF /* StepFiveViewController.h */,
+				1076C91C1B7B96CB000F7ACF /* StepFiveViewController.m */,
+				1076C91E1B7B96D7000F7ACF /* StepSixViewController.h */,
+				1076C91F1B7B96D7000F7ACF /* StepSixViewController.m */,
+				1076C9211B7B96E6000F7ACF /* StepSevenViewController.h */,
+				1076C9221B7B96E6000F7ACF /* StepSevenViewController.m */,
+				1076C9241B7BB1A4000F7ACF /* StepApplyViewController.h */,
+				1076C9251B7BB1A4000F7ACF /* StepApplyViewController.m */,
+			);
+			path = ApplyDetailControllers;
 			sourceTree = "<group>";
 		};
 		109139641B72CE8000269DAD /* Library */ = {
@@ -614,17 +662,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				1033BB881B5BA8470021BC92 /* AppDelegate.m in Sources */,
+				1076C9261B7BB1A4000F7ACF /* StepApplyViewController.m in Sources */,
 				1091396B1B72E02200269DAD /* CourseDetailViewController.m in Sources */,
 				109139681B72CEB700269DAD /* ALCustomColoredAccessory.m in Sources */,
+				1076C9201B7B96D7000F7ACF /* StepSixViewController.m in Sources */,
+				1076C9231B7B96E6000F7ACF /* StepSevenViewController.m in Sources */,
 				1033BBAF1B5C70830021BC92 /* CorseViewController.m in Sources */,
+				1076C9111B7B94AE000F7ACF /* StepOneViewController.m in Sources */,
 				1091396E1B72E3F400269DAD /* CourseMajorDetailViewController.m in Sources */,
 				1033BB8B1B5BA8470021BC92 /* MasterViewController.m in Sources */,
 				1033BB851B5BA8470021BC92 /* main.m in Sources */,
 				1033BBBD1B5C70CC0021BC92 /* ContactViewController.m in Sources */,
 				1033BB8E1B5BA8480021BC92 /* DetailViewController.m in Sources */,
+				1076C91A1B7B96AC000F7ACF /* StepFourViewController.m in Sources */,
 				1033BBB21B5C709D0021BC92 /* ApplyViewController.m in Sources */,
 				1033BBB51B5C70A70021BC92 /* NewsViewController.m in Sources */,
 				1033BBBA1B5C70C20021BC92 /* ActivityViewController.m in Sources */,
+				1076C9141B7B9692000F7ACF /* StepTwoViewController.m in Sources */,
+				1076C9171B7B969F000F7ACF /* StepThreeViewController.m in Sources */,
+				1076C91D1B7B96CB000F7ACF /* StepFiveViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
