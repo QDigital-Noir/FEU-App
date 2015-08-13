@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <GUITabPagerViewController.h>
 
 @interface ApplyViewController : GUITabPagerViewController
 @property (weak, nonatomic) IBOutlet UITabBarItem *tabbar;

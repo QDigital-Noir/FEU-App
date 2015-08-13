@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ActivityViewController : UIViewController
+@interface ActivityViewController : CKCalendarViewController
 @property (weak, nonatomic) IBOutlet UITabBarItem *tabbar;
 
 @end
