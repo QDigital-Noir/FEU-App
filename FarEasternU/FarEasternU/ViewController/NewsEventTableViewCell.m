@@ -20,12 +20,21 @@
     // Configure the view for the selected state
 }
 
-- (void)setContentViewWithFrame:(CGRect)frame andTitle:(NSString *)title andURL:(NSString *)url
+- (void)setContentViewWithFrame:(CGRect)frame andTitle:(NSString *)title andPhoto:(PFFile *)photo
 {
     self.thumbImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 150, 90)];
-    self.thumbImageView.backgroundColor = [UIColor greenColor];
-    [self.thumbImageView sd_setImageWithURL:[NSURL URLWithString:@"http://www2.feu.ac.th/thai/thumbnail.php?src=/admin/pr/newscontrol/picture/J120150818104757.JPG&w=210&h=150"]
-                           placeholderImage:nil];
+    self.thumbImageView.backgroundColor = [UIColor clearColor];
+//    [self.thumbImageView sd_setImageWithURL:[NSURL URLWithString:@"http://www2.feu.ac.th/thai/thumbnail.php?src=/admin/pr/newscontrol/picture/J120150818104757.JPG&w=210&h=150"]
+//                           placeholderImage:[UIImage imageNamed:@"placeholder"]];
+    self.thumbImageView.image = [UIImage imageNamed:@"placeholder"];
+    self.thumbImageView.contentMode = UIViewContentModeScaleToFill;
+    
+    [photo getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
+        if (!error)
+        {
+            self.thumbImageView.image = [UIImage imageWithData:imageData];
+        }
+    }];
     
     self.titleLB = [[UILabel alloc] initWithFrame:CGRectMake(170, 10, frame.size.width - (170 + 20), 70)];
     self.titleLB.backgroundColor = [UIColor clearColor];

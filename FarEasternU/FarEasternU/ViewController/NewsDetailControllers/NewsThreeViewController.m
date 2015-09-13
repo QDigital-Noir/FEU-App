@@ -8,6 +8,7 @@
 
 #import "NewsThreeViewController.h"
 #import "NewsEventTableViewCell.h"
+#import "NewsDetailsViewController.h"
 
 @interface NewsThreeViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -102,19 +103,21 @@
 - (void)configureCell:(NewsEventTableViewCell *)cell
     forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
     PFObject *object = [self.newsArray objectAtIndex:indexPath.row];
-    
+    PFFile *photo = object[@"Thumbnail"];
     [cell setContentViewWithFrame:self.view.frame
                          andTitle:[object objectForKey:@"NewsTitle"]
-                           andURL:@""];
+                         andPhoto:photo];
 }
 
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    NewsDetailsViewController *detailVC = [storyboard instantiateViewControllerWithIdentifier:@"NewsDetailsViewController"];
+    detailVC.newsObj = (PFObject *)[self.newsArray objectAtIndex:indexPath.row];
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

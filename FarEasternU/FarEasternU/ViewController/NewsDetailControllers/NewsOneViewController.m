@@ -103,10 +103,10 @@
     forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     PFObject *object = [self.newsArray objectAtIndex:indexPath.row];
-    
+    PFFile *photo = object[@"Thumbnail"];
     [cell setContentViewWithFrame:self.view.frame
                          andTitle:[object objectForKey:@"NewsTitle"]
-                           andURL:@""];
+                           andPhoto:photo];
 }
 
 #pragma mark - UITableViewDelegate
@@ -150,6 +150,7 @@
                     {
                         self.newsArray = [NSArray arrayWithArray:objects];
                     }
+                    
                     [self setupTableView];
                     [KVNProgress dismiss];
                 }

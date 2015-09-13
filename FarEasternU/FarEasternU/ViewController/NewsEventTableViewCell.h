@@ -13,6 +13,6 @@
 @property (nonatomic, strong) UIImageView *thumbImageView;
 @property (nonatomic, strong) UILabel *titleLB;
 
-- (void)setContentViewWithFrame:(CGRect)frame andTitle:(NSString *)title andURL:(NSString *)url;
+- (void)setContentViewWithFrame:(CGRect)frame andTitle:(NSString *)title andPhoto:(PFFile *)photo;
 
 @end
