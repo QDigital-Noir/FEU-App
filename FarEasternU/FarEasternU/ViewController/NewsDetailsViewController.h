@@ -10,4 +10,6 @@
 
 @interface NewsDetailsViewController : UIViewController
 
+@property (nonatomic, strong) PFObject *newsObj;
+
 @end

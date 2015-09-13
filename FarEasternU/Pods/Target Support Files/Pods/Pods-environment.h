@@ -84,6 +84,12 @@
 #define COCOAPODS_VERSION_MINOR_Parse 8
 #define COCOAPODS_VERSION_PATCH_Parse 2
 
+// RDImageViewerController
+#define COCOAPODS_POD_AVAILABLE_RDImageViewerController
+#define COCOAPODS_VERSION_MAJOR_RDImageViewerController 0
+#define COCOAPODS_VERSION_MINOR_RDImageViewerController 3
+#define COCOAPODS_VERSION_PATCH_RDImageViewerController 7
+
 // SDWebImage
 #define COCOAPODS_POD_AVAILABLE_SDWebImage
 #define COCOAPODS_VERSION_MAJOR_SDWebImage 3

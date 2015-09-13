@@ -7,3 +7,4 @@ platform :ios, '8.0'
   pod 'GUITabPagerViewController', '~> 0.0.7'
   pod 'JTCalendar', '~> 2.0'
   pod 'Parse', '~> 1.8.1'
+  pod "RDImageViewerController"

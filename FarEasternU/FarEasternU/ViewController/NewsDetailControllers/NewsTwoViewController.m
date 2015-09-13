@@ -141,6 +141,7 @@
                     if (self.newsArray != nil || self.newsArray.count > 0)
                     {
                         self.newsArray = nil;
+                        self.newsArray = [NSArray arrayWithArray:objects];
                     }
                     else
                     {

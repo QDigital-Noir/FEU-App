@@ -20,5 +20,6 @@
 #import <Parse/Parse.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <KVNProgress/KVNProgress.h>
+#import "RDImageViewerController.h"
 
 #endif

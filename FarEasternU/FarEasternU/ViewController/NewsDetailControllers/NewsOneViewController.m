@@ -115,6 +115,7 @@
 {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     NewsDetailsViewController *detailVC = [storyboard instantiateViewControllerWithIdentifier:@"NewsDetailsViewController"];
+    detailVC.newsObj = (PFObject *)[self.newsArray objectAtIndex:indexPath.row];
     [self.navigationController pushViewController:detailVC animated:YES];
 }
 
@@ -143,6 +144,7 @@
                     if (self.newsArray != nil || self.newsArray.count > 0)
                     {
                         self.newsArray = nil;
+                        self.newsArray = [NSArray arrayWithArray:objects];
                     }
                     else
                     {

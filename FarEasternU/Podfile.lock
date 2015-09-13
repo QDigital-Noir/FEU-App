@@ -27,6 +27,7 @@ PODS:
   - MBCalendarKit (3.0.4)
   - Parse (1.8.2):
     - Bolts/Tasks (>= 1.2.1)
+  - RDImageViewerController (0.3.7)
   - SDWebImage (3.7.3):
     - SDWebImage/Core (= 3.7.3)
   - SDWebImage/Core (3.7.3)
@@ -39,6 +40,7 @@ DEPENDENCIES:
   - KVNProgress (~> 2.2.1)
   - MBCalendarKit (~> 3.0.4)
   - Parse (~> 1.8.1)
+  - RDImageViewerController
   - SDWebImage (~> 3.7.2)
   - XCDYouTubeKit (~> 2.2.0)
 
@@ -50,6 +52,7 @@ SPEC CHECKSUMS:
   KVNProgress: 7001d2d16a2755cee5599e8e485befe056f2197b
   MBCalendarKit: 2a3a60f902162a03bb4957966a4b795af998211f
   Parse: 188601c6cd91fae55906badd283b513104a3a8c9
+  RDImageViewerController: d2f6c2529d8c4b470f9d75c0a8639b2778f63c56
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   XCDYouTubeKit: 920ff5dfdf37f0f41b19610c5270b2ed23b05b13
 
