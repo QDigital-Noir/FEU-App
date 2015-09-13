@@ -38,6 +38,9 @@
 		1033BBE01B5C73200021BC92 /* ThaiSansNeue-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1033BBCE1B5C73200021BC92 /* ThaiSansNeue-Italic.ttf */; };
 		1033BBE11B5C73200021BC92 /* ThaiSansNeue-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1033BBCF1B5C73200021BC92 /* ThaiSansNeue-Light.ttf */; };
 		1033BBE21B5C73200021BC92 /* ThaiSansNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1033BBD01B5C73200021BC92 /* ThaiSansNeue-Regular.ttf */; };
+		10403C7A1BA56FAF00D97276 /* NewsDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10403C791BA56FAF00D97276 /* NewsDetailsViewController.m */; };
+		106921BD1BA1D2EF0065585E /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 106921BC1BA1D2EF0065585E /* CalendarViewController.m */; };
+		106921C01BA1D3580065585E /* CalendarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 106921BF1BA1D3580065585E /* CalendarTableViewCell.m */; };
 		1076C9111B7B94AE000F7ACF /* StepOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1076C9101B7B94AE000F7ACF /* StepOneViewController.m */; };
 		1076C9141B7B9692000F7ACF /* StepTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1076C9131B7B9692000F7ACF /* StepTwoViewController.m */; };
 		1076C9171B7B969F000F7ACF /* StepThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1076C9161B7B969F000F7ACF /* StepThreeViewController.m */; };
@@ -46,9 +49,13 @@
 		1076C9201B7B96D7000F7ACF /* StepSixViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1076C91F1B7B96D7000F7ACF /* StepSixViewController.m */; };
 		1076C9231B7B96E6000F7ACF /* StepSevenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1076C9221B7B96E6000F7ACF /* StepSevenViewController.m */; };
 		1076C9261B7BB1A4000F7ACF /* StepApplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1076C9251B7BB1A4000F7ACF /* StepApplyViewController.m */; };
+		1087B9831BA4417800367652 /* NewsOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1087B9821BA4417800367652 /* NewsOneViewController.m */; };
+		1087B9861BA4418500367652 /* NewsTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1087B9851BA4418500367652 /* NewsTwoViewController.m */; };
+		1087B9891BA4419400367652 /* NewsThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1087B9881BA4419400367652 /* NewsThreeViewController.m */; };
 		109139681B72CEB700269DAD /* ALCustomColoredAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = 109139671B72CEB700269DAD /* ALCustomColoredAccessory.m */; };
 		1091396B1B72E02200269DAD /* CourseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1091396A1B72E02200269DAD /* CourseDetailViewController.m */; };
 		1091396E1B72E3F400269DAD /* CourseMajorDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1091396D1B72E3F400269DAD /* CourseMajorDetailViewController.m */; };
+		10A53DBD1B94AD7D00F88DB5 /* NewsEventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A53DBC1B94AD7D00F88DB5 /* NewsEventTableViewCell.m */; };
 		10F542D71B7965BD0044508C /* nitate.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 10F542D61B7965BD0044508C /* nitate.jpg */; };
 		10F542ED1B7965E30044508C /* accounting.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 10F542E61B7965E30044508C /* accounting.jpg */; };
 		10F542EE1B7965E30044508C /* computer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 10F542E71B7965E30044508C /* computer.jpg */; };
@@ -136,6 +143,12 @@
 		1033BBCE1B5C73200021BC92 /* ThaiSansNeue-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ThaiSansNeue-Italic.ttf"; sourceTree = "<group>"; };
 		1033BBCF1B5C73200021BC92 /* ThaiSansNeue-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ThaiSansNeue-Light.ttf"; sourceTree = "<group>"; };
 		1033BBD01B5C73200021BC92 /* ThaiSansNeue-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ThaiSansNeue-Regular.ttf"; sourceTree = "<group>"; };
+		10403C781BA56FAF00D97276 /* NewsDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsDetailsViewController.h; path = FarEasternU/ViewController/NewsDetailsViewController.h; sourceTree = SOURCE_ROOT; };
+		10403C791BA56FAF00D97276 /* NewsDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsDetailsViewController.m; path = FarEasternU/ViewController/NewsDetailsViewController.m; sourceTree = SOURCE_ROOT; };
+		106921BB1BA1D2EF0065585E /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
+		106921BC1BA1D2EF0065585E /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
+		106921BE1BA1D3580065585E /* CalendarTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarTableViewCell.h; sourceTree = "<group>"; };
+		106921BF1BA1D3580065585E /* CalendarTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarTableViewCell.m; sourceTree = "<group>"; };
 		1076C90F1B7B94AE000F7ACF /* StepOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepOneViewController.h; sourceTree = "<group>"; };
 		1076C9101B7B94AE000F7ACF /* StepOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepOneViewController.m; sourceTree = "<group>"; };
 		1076C9121B7B9692000F7ACF /* StepTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepTwoViewController.h; sourceTree = "<group>"; };
@@ -152,6 +165,12 @@
 		1076C9221B7B96E6000F7ACF /* StepSevenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepSevenViewController.m; sourceTree = "<group>"; };
 		1076C9241B7BB1A4000F7ACF /* StepApplyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepApplyViewController.h; sourceTree = "<group>"; };
 		1076C9251B7BB1A4000F7ACF /* StepApplyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepApplyViewController.m; sourceTree = "<group>"; };
+		1087B9811BA4417800367652 /* NewsOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsOneViewController.h; sourceTree = "<group>"; };
+		1087B9821BA4417800367652 /* NewsOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsOneViewController.m; sourceTree = "<group>"; };
+		1087B9841BA4418500367652 /* NewsTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTwoViewController.h; sourceTree = "<group>"; };
+		1087B9851BA4418500367652 /* NewsTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTwoViewController.m; sourceTree = "<group>"; };
+		1087B9871BA4419400367652 /* NewsThreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsThreeViewController.h; sourceTree = "<group>"; };
+		1087B9881BA4419400367652 /* NewsThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsThreeViewController.m; sourceTree = "<group>"; };
 		109139631B72BB5F00269DAD /* FarEasternU-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FarEasternU-Prefix.pch"; sourceTree = "<group>"; };
 		109139661B72CEB700269DAD /* ALCustomColoredAccessory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALCustomColoredAccessory.h; sourceTree = "<group>"; };
 		109139671B72CEB700269DAD /* ALCustomColoredAccessory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALCustomColoredAccessory.m; sourceTree = "<group>"; };
@@ -159,6 +178,8 @@
 		1091396A1B72E02200269DAD /* CourseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseDetailViewController.m; sourceTree = "<group>"; };
 		1091396C1B72E3F400269DAD /* CourseMajorDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseMajorDetailViewController.h; sourceTree = "<group>"; };
 		1091396D1B72E3F400269DAD /* CourseMajorDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseMajorDetailViewController.m; sourceTree = "<group>"; };
+		10A53DBB1B94AD7D00F88DB5 /* NewsEventTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsEventTableViewCell.h; sourceTree = "<group>"; };
+		10A53DBC1B94AD7D00F88DB5 /* NewsEventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsEventTableViewCell.m; sourceTree = "<group>"; };
 		10F542D61B7965BD0044508C /* nitate.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nitate.jpg; sourceTree = "<group>"; };
 		10F542E61B7965E30044508C /* accounting.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = accounting.jpg; sourceTree = "<group>"; };
 		10F542E71B7965E30044508C /* computer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = computer.jpg; sourceTree = "<group>"; };
@@ -292,6 +313,7 @@
 		1033BBAC1B5C70400021BC92 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				1087B9801BA440FF00367652 /* NewsDetailContorllers */,
 				1076C90E1B7B946B000F7ACF /* ApplyDetailControllers */,
 				1033BBAD1B5C70830021BC92 /* CorseViewController.h */,
 				1033BBAE1B5C70830021BC92 /* CorseViewController.m */,
@@ -307,6 +329,12 @@
 				1091396A1B72E02200269DAD /* CourseDetailViewController.m */,
 				1091396C1B72E3F400269DAD /* CourseMajorDetailViewController.h */,
 				1091396D1B72E3F400269DAD /* CourseMajorDetailViewController.m */,
+				10A53DBB1B94AD7D00F88DB5 /* NewsEventTableViewCell.h */,
+				10A53DBC1B94AD7D00F88DB5 /* NewsEventTableViewCell.m */,
+				106921BB1BA1D2EF0065585E /* CalendarViewController.h */,
+				106921BC1BA1D2EF0065585E /* CalendarViewController.m */,
+				106921BE1BA1D3580065585E /* CalendarTableViewCell.h */,
+				106921BF1BA1D3580065585E /* CalendarTableViewCell.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -357,6 +385,22 @@
 				1076C9251B7BB1A4000F7ACF /* StepApplyViewController.m */,
 			);
 			path = ApplyDetailControllers;
+			sourceTree = "<group>";
+		};
+		1087B9801BA440FF00367652 /* NewsDetailContorllers */ = {
+			isa = PBXGroup;
+			children = (
+				1087B9811BA4417800367652 /* NewsOneViewController.h */,
+				1087B9821BA4417800367652 /* NewsOneViewController.m */,
+				1087B9841BA4418500367652 /* NewsTwoViewController.h */,
+				1087B9851BA4418500367652 /* NewsTwoViewController.m */,
+				1087B9871BA4419400367652 /* NewsThreeViewController.h */,
+				1087B9881BA4419400367652 /* NewsThreeViewController.m */,
+				10403C781BA56FAF00D97276 /* NewsDetailsViewController.h */,
+				10403C791BA56FAF00D97276 /* NewsDetailsViewController.m */,
+			);
+			name = NewsDetailContorllers;
+			path = NewsDetailControllers;
 			sourceTree = "<group>";
 		};
 		109139641B72CE8000269DAD /* Library */ = {
@@ -661,15 +705,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1087B9891BA4419400367652 /* NewsThreeViewController.m in Sources */,
 				1033BB881B5BA8470021BC92 /* AppDelegate.m in Sources */,
 				1076C9261B7BB1A4000F7ACF /* StepApplyViewController.m in Sources */,
 				1091396B1B72E02200269DAD /* CourseDetailViewController.m in Sources */,
+				10A53DBD1B94AD7D00F88DB5 /* NewsEventTableViewCell.m in Sources */,
 				109139681B72CEB700269DAD /* ALCustomColoredAccessory.m in Sources */,
 				1076C9201B7B96D7000F7ACF /* StepSixViewController.m in Sources */,
 				1076C9231B7B96E6000F7ACF /* StepSevenViewController.m in Sources */,
 				1033BBAF1B5C70830021BC92 /* CorseViewController.m in Sources */,
+				1087B9861BA4418500367652 /* NewsTwoViewController.m in Sources */,
+				1087B9831BA4417800367652 /* NewsOneViewController.m in Sources */,
 				1076C9111B7B94AE000F7ACF /* StepOneViewController.m in Sources */,
 				1091396E1B72E3F400269DAD /* CourseMajorDetailViewController.m in Sources */,
+				106921BD1BA1D2EF0065585E /* CalendarViewController.m in Sources */,
 				1033BB8B1B5BA8470021BC92 /* MasterViewController.m in Sources */,
 				1033BB851B5BA8470021BC92 /* main.m in Sources */,
 				1033BBBD1B5C70CC0021BC92 /* ContactViewController.m in Sources */,
@@ -678,8 +727,10 @@
 				1033BBB21B5C709D0021BC92 /* ApplyViewController.m in Sources */,
 				1033BBB51B5C70A70021BC92 /* NewsViewController.m in Sources */,
 				1033BBBA1B5C70C20021BC92 /* ActivityViewController.m in Sources */,
+				106921C01BA1D3580065585E /* CalendarTableViewCell.m in Sources */,
 				1076C9141B7B9692000F7ACF /* StepTwoViewController.m in Sources */,
 				1076C9171B7B969F000F7ACF /* StepThreeViewController.m in Sources */,
+				10403C7A1BA56FAF00D97276 /* NewsDetailsViewController.m in Sources */,
 				1076C91D1B7B96CB000F7ACF /* StepFiveViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

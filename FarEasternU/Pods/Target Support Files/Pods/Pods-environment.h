@@ -48,11 +48,23 @@
 #define COCOAPODS_VERSION_MINOR_AFNetworking_UIKit 5
 #define COCOAPODS_VERSION_PATCH_AFNetworking_UIKit 4
 
+// Bolts/Tasks
+#define COCOAPODS_POD_AVAILABLE_Bolts_Tasks
+#define COCOAPODS_VERSION_MAJOR_Bolts_Tasks 1
+#define COCOAPODS_VERSION_MINOR_Bolts_Tasks 2
+#define COCOAPODS_VERSION_PATCH_Bolts_Tasks 1
+
 // GUITabPagerViewController
 #define COCOAPODS_POD_AVAILABLE_GUITabPagerViewController
 #define COCOAPODS_VERSION_MAJOR_GUITabPagerViewController 0
 #define COCOAPODS_VERSION_MINOR_GUITabPagerViewController 0
 #define COCOAPODS_VERSION_PATCH_GUITabPagerViewController 7
+
+// JTCalendar
+#define COCOAPODS_POD_AVAILABLE_JTCalendar
+#define COCOAPODS_VERSION_MAJOR_JTCalendar 2
+#define COCOAPODS_VERSION_MINOR_JTCalendar 1
+#define COCOAPODS_VERSION_PATCH_JTCalendar 1
 
 // KVNProgress
 #define COCOAPODS_POD_AVAILABLE_KVNProgress
@@ -65,6 +77,12 @@
 #define COCOAPODS_VERSION_MAJOR_MBCalendarKit 3
 #define COCOAPODS_VERSION_MINOR_MBCalendarKit 0
 #define COCOAPODS_VERSION_PATCH_MBCalendarKit 4
+
+// Parse
+#define COCOAPODS_POD_AVAILABLE_Parse
+#define COCOAPODS_VERSION_MAJOR_Parse 1
+#define COCOAPODS_VERSION_MINOR_Parse 8
+#define COCOAPODS_VERSION_PATCH_Parse 2
 
 // SDWebImage
 #define COCOAPODS_POD_AVAILABLE_SDWebImage

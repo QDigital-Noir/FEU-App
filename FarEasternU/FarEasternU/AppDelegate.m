@@ -17,6 +17,19 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    // [Optional] Power your app with Local Datastore. For more info, go to
+    // https://parse.com/docs/ios_guide#localdatastore/iOS
+    [Parse enableLocalDatastore];
+    
+    // Initialize Parse.
+    [Parse setApplicationId:@"BzyETqEtwMJ190cUMRSHjWKRqnMBjrEEd7m4BKbw"
+                  clientKey:@"0vf47JH4sfz0NuqK2LXR9YmTAD8nTnZXsYbUWrLw"];
+    
+    // [Optional] Track statistics around application opens.
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    
     // Override point for customization after application launch.
 //    UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
 //    UINavigationController *navigationController = [splitViewController.viewControllers lastObject];

@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NewsViewController : UIViewController
+@interface NewsViewController : GUITabPagerViewController
+
 @property (weak, nonatomic) IBOutlet UITabBarItem *tabbar;
 
 @end

@@ -16,5 +16,9 @@
 #import "NSCalendarCategories.h"
 #import "NSDate+Components.h"
 #import <GUITabPagerViewController.h>
+#import <JTCalendar/JTCalendar.h>
+#import <Parse/Parse.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <KVNProgress/KVNProgress.h>
 
 #endif

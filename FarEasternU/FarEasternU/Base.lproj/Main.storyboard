@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="y3y-oa-t6p">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="y3y-oa-t6p">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -81,7 +81,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="isa-dx-4IU" style="IBUITableViewCellStyleDefault" id="tQQ-AI-7yz">
-                                        <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tQQ-AI-7yz" id="CVP-g7-5tw">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -370,10 +370,22 @@
         <!--มหาวิทยาลัยฟาร์อีสเทอร์น-->
         <scene sceneID="nAW-VD-0y8">
             <objects>
-                <viewController id="T6g-7L-0lg" customClass="ActivityViewController" sceneMemberID="viewController">
+                <viewController id="T6g-7L-0lg" customClass="CalendarViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ih9-Hi-7O0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="jKc-Nn-J67" customClass="JTHorizontalCalendarView">
+                                <rect key="frame" x="0.0" y="115" width="320" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="zhi-7T-5xB" customClass="JTCalendarMenuView">
+                                <rect key="frame" x="0.0" y="65" width="320" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.50980392159999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="มหาวิทยาลัยฟาร์อีสเทอร์น" id="rBU-tw-g0x">
@@ -401,6 +413,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="calendarContentView" destination="jKc-Nn-J67" id="psV-OH-0DD"/>
+                        <outlet property="calendarMenuView" destination="zhi-7T-5xB" id="FSe-Xa-SlZ"/>
                         <outlet property="tabbar" destination="LsR-6V-VHY" id="RlL-jX-eXe"/>
                     </connections>
                 </viewController>
@@ -493,6 +507,20 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="weT-TC-J8a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1275.2" y="1725.7733333333333"/>
+        </scene>
+        <!--News Details View Controller-->
+        <scene sceneID="Szt-FP-jJV">
+            <objects>
+                <viewController storyboardIdentifier="NewsDetailsViewController" id="CeI-bK-TGo" customClass="NewsDetailsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="62Q-bR-h6I">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6v7-fq-aAd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1717" y="1033"/>
         </scene>
         <!--Step Three View Controller-->
         <scene sceneID="IMv-LB-okU">
@@ -2487,6 +2515,48 @@ Cg
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Soe-rC-YPm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3093" y="347"/>
+        </scene>
+        <!--News One View Controller-->
+        <scene sceneID="X8k-r6-pL3">
+            <objects>
+                <viewController storyboardIdentifier="NewsOneViewController" id="nY9-zU-Uw0" customClass="NewsOneViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WNr-lC-Gaw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C48-pq-PAO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3210" y="2019"/>
+        </scene>
+        <!--News Two View Controller-->
+        <scene sceneID="ylm-x9-sx2">
+            <objects>
+                <viewController storyboardIdentifier="NewsTwoViewController" id="YyI-6o-Eeq" customClass="NewsTwoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0L0-QC-2Vf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zZ2-Q2-dvw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3729" y="2019"/>
+        </scene>
+        <!--News Three View Controller-->
+        <scene sceneID="PYC-AX-TPh">
+            <objects>
+                <viewController storyboardIdentifier="NewsThreeViewController" id="TpC-5q-XFJ" customClass="NewsThreeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GMw-VY-AJM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uDZ-nY-CY7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4271" y="2019"/>
         </scene>
         <!--Step Five View Controller-->
         <scene sceneID="V8t-xm-4RZ">
@@ -5537,7 +5607,7 @@ Cgo
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dsM-h2-cXD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="409.60000000000002" y="1725.7733333333333"/>
+            <point key="canvasLocation" x="409" y="1725"/>
         </scene>
         <!--Master-->
         <scene sceneID="smW-Zh-WAh">
@@ -5549,7 +5619,7 @@ Cgo
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="Arm-wq-HPj" style="IBUITableViewCellStyleDefault" id="WCw-Qf-5nD">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WCw-Qf-5nD" id="37f-cq-3Eg">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
