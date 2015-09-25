@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1006D7691BB4DD8000D877F6 /* CalendarDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1006D7681BB4DD8000D877F6 /* CalendarDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
 		1033BB851B5BA8470021BC92 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1033BB841B5BA8470021BC92 /* main.m */; };
 		1033BB881B5BA8470021BC92 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1033BB871B5BA8470021BC92 /* AppDelegate.m */; };
 		1033BB8B1B5BA8470021BC92 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1033BB8A1B5BA8470021BC92 /* MasterViewController.m */; };
@@ -100,6 +101,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1006D7671BB4DD8000D877F6 /* CalendarDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarDetailViewController.h; sourceTree = "<group>"; };
+		1006D7681BB4DD8000D877F6 /* CalendarDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarDetailViewController.m; sourceTree = "<group>"; };
 		1033BB7F1B5BA8470021BC92 /* FarEasternU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FarEasternU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1033BB831B5BA8470021BC92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1033BB841B5BA8470021BC92 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -335,6 +338,8 @@
 				106921BC1BA1D2EF0065585E /* CalendarViewController.m */,
 				106921BE1BA1D3580065585E /* CalendarTableViewCell.h */,
 				106921BF1BA1D3580065585E /* CalendarTableViewCell.m */,
+				1006D7671BB4DD8000D877F6 /* CalendarDetailViewController.h */,
+				1006D7681BB4DD8000D877F6 /* CalendarDetailViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -714,6 +719,7 @@
 				1076C9201B7B96D7000F7ACF /* StepSixViewController.m in Sources */,
 				1076C9231B7B96E6000F7ACF /* StepSevenViewController.m in Sources */,
 				1033BBAF1B5C70830021BC92 /* CorseViewController.m in Sources */,
+				1006D7691BB4DD8000D877F6 /* CalendarDetailViewController.m in Sources */,
 				1087B9861BA4418500367652 /* NewsTwoViewController.m in Sources */,
 				1087B9831BA4417800367652 /* NewsOneViewController.m in Sources */,
 				1076C9111B7B94AE000F7ACF /* StepOneViewController.m in Sources */,
@@ -812,6 +818,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"-ObjC",
+				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -849,6 +859,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"-ObjC",
+				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -862,9 +876,69 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Thanaporn Doungkamchan (AA292B4375)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Thanaporn Doungkamchan (AA292B4375)";
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "FarEasternU/FarEasternU-Prefix.pch";
 				INFOPLIST_FILE = FarEasternU/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-Wl,-U,_JSContextGetGlobalObject",
+					"-Wl,-U,_JSEvaluateScript",
+					"-Wl,-U,_JSGlobalContextCreate",
+					"-Wl,-U,_JSGlobalContextRelease",
+					"-Wl,-U,_JSObjectCallAsFunction",
+					"-Wl,-U,_JSObjectIsFunction",
+					"-Wl,-U,_JSObjectMake",
+					"-Wl,-U,_JSObjectSetProperty",
+					"-Wl,-U,_JSStringCopyCFString",
+					"-Wl,-U,_JSStringCreateWithCFString",
+					"-Wl,-U,_JSStringRelease",
+					"-Wl,-U,_JSValueIsObject",
+					"-Wl,-U,_JSValueIsString",
+					"-Wl,-U,_JSValueMakeString",
+					"-Wl,-U,_JSValueToStringCopy",
+					"-l\"Pods-AFNetworking\"",
+					"-l\"Pods-Bolts\"",
+					"-l\"Pods-GUITabPagerViewController\"",
+					"-l\"Pods-JTCalendar\"",
+					"-l\"Pods-KVNProgress\"",
+					"-l\"Pods-MBCalendarKit\"",
+					"-l\"Pods-Parse\"",
+					"-l\"Pods-RDImageViewerController\"",
+					"-l\"Pods-SDWebImage\"",
+					"-l\"Pods-XCDYouTubeKit\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AudioToolbox\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"GLKit\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MediaPlayer\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-weak_framework",
+					"\"Accounts\"",
+					"-weak_framework",
+					"\"Social\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "c6f81c3c-b425-4127-a283-1e1164d8e04f";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -878,9 +952,69 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Thanaporn Doungkamchan (AA292B4375)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Thanaporn Doungkamchan (AA292B4375)";
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "FarEasternU/FarEasternU-Prefix.pch";
 				INFOPLIST_FILE = FarEasternU/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-Wl,-U,_JSContextGetGlobalObject",
+					"-Wl,-U,_JSEvaluateScript",
+					"-Wl,-U,_JSGlobalContextCreate",
+					"-Wl,-U,_JSGlobalContextRelease",
+					"-Wl,-U,_JSObjectCallAsFunction",
+					"-Wl,-U,_JSObjectIsFunction",
+					"-Wl,-U,_JSObjectMake",
+					"-Wl,-U,_JSObjectSetProperty",
+					"-Wl,-U,_JSStringCopyCFString",
+					"-Wl,-U,_JSStringCreateWithCFString",
+					"-Wl,-U,_JSStringRelease",
+					"-Wl,-U,_JSValueIsObject",
+					"-Wl,-U,_JSValueIsString",
+					"-Wl,-U,_JSValueMakeString",
+					"-Wl,-U,_JSValueToStringCopy",
+					"-l\"Pods-AFNetworking\"",
+					"-l\"Pods-Bolts\"",
+					"-l\"Pods-GUITabPagerViewController\"",
+					"-l\"Pods-JTCalendar\"",
+					"-l\"Pods-KVNProgress\"",
+					"-l\"Pods-MBCalendarKit\"",
+					"-l\"Pods-Parse\"",
+					"-l\"Pods-RDImageViewerController\"",
+					"-l\"Pods-SDWebImage\"",
+					"-l\"Pods-XCDYouTubeKit\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AudioToolbox\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"GLKit\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MediaPlayer\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-weak_framework",
+					"\"Accounts\"",
+					"-weak_framework",
+					"\"Social\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "c6f81c3c-b425-4127-a283-1e1164d8e04f";
 				TARGETED_DEVICE_FAMILY = 1;

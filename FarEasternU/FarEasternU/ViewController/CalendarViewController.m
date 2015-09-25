@@ -8,6 +8,7 @@
 
 #import "CalendarViewController.h"
 #import "CalendarTableViewCell.h"
+#import "CalendarDetailViewController.h"
 
 @interface CalendarViewController () <UITableViewDataSource, UITableViewDelegate>
 {
@@ -20,33 +21,22 @@
 }
 
 @property (nonatomic, strong) UITableView *eventTVB;
+@property (nonatomic, strong) NSMutableArray *eventArray;
+
 @end
 
 @implementation CalendarViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self loadData];
     // Do any additional setup after loading the view.
     UIImage *unselectedImage = [UIImage imageNamed:@"icon_news"];
     UIImage *selectedImage = [UIImage imageNamed:@"icon_news_selected"];
     
     [self.tabbar setImage: [unselectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     [self.tabbar setSelectedImage: selectedImage];
-    
-    _calendarManager = [JTCalendarManager new];
-    _calendarManager.delegate = self;
-    
-    // Generate random events sort by date using a dateformatter for the demonstration
-    [self createRandomEvents];
-    
-    // Create a min and max date for limit the calendar, optional
-    [self createMinAndMaxDate];
-    
-    [_calendarManager setMenuView:_calendarMenuView];
-    [_calendarManager setContentView:_calendarContentView];
-    [_calendarManager setDate:_todayDate];
-    
-    [self adjustCalendarView];
+    [self setupCalendar];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -63,6 +53,28 @@
  // Pass the selected object to the new view controller.
  }
  */
+
+#pragma mark - Setup Calendar
+
+- (void)setupCalendar
+{
+    _calendarManager = [JTCalendarManager new];
+    _calendarManager.delegate = self;
+    
+    // Generate random events sort by date using a dateformatter for the demonstration
+//    [self createRandomEvents];
+    
+    // Create a min and max date for limit the calendar, optional
+    [self createMinAndMaxDate];
+    
+    [_calendarManager setMenuView:_calendarMenuView];
+    [_calendarManager setContentView:_calendarContentView];
+    [_calendarManager setDate:_todayDate];
+    
+    [self adjustCalendarView];
+}
+
+
 #pragma mark - Buttons callback
 
 - (IBAction)didGoTodayTouch
@@ -142,11 +154,14 @@
     
     // Load the previous or next page if touch a day from another month
     
-    if(![_calendarManager.dateHelper date:_calendarContentView.date isTheSameMonthThan:dayView.date]){
-        if([_calendarContentView.date compare:dayView.date] == NSOrderedAscending){
+    if(![_calendarManager.dateHelper date:_calendarContentView.date isTheSameMonthThan:dayView.date])
+    {
+        if([_calendarContentView.date compare:dayView.date] == NSOrderedAscending)
+        {
             [_calendarContentView loadNextPageWithAnimation];
         }
-        else{
+        else
+        {
             [_calendarContentView loadPreviousPageWithAnimation];
         }
     }
@@ -162,12 +177,12 @@
 
 - (void)calendarDidLoadNextPage:(JTCalendarManager *)calendar
 {
-    //    NSLog(@"Next page loaded");
+        NSLog(@"Next page loaded");
 }
 
 - (void)calendarDidLoadPreviousPage:(JTCalendarManager *)calendar
 {
-    //    NSLog(@"Previous page loaded");
+        NSLog(@"Previous page loaded");
 }
 
 #pragma mark - Fake data
@@ -222,7 +237,10 @@
             _eventsByDate[key] = [NSMutableArray new];
         }
         
-        [_eventsByDate[key] addObject:randomDate];
+        [_eventsByDate[key] addObject:randomDate]; // DATE
+        [_eventsByDate[key] addObject:@""]; // THUMBNAIL
+        [_eventsByDate[key] addObject:@""]; // TITLE
+        [_eventsByDate[key] addObject:@""]; // DESCRIPTION
     }
 }
 
@@ -230,8 +248,8 @@
 
 - (void)adjustCalendarView
 {
-    self.calendarMenuView.frame = CGRectMake(0, -20, self.view.frame.size.width, self.calendarMenuView.frame.size.height);
-    self.calendarContentView.frame = CGRectMake(0, self.calendarMenuView.frame.size.height - 100, self.view.frame.size.width, 300);
+    self.calendarMenuView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.calendarMenuView.frame.size.height - 40);
+    self.calendarContentView.frame = CGRectMake(0, self.calendarMenuView.frame.size.height - 64, self.view.frame.size.width, 300);
     
     [self createEventTableView];
 }
@@ -247,7 +265,8 @@
                                                  style:UITableViewStylePlain];
     self.eventTVB.delegate = self;
     self.eventTVB.dataSource = self;
-    self.eventTVB.backgroundColor = [UIColor redColor];
+    self.eventTVB.backgroundColor = [UIColor whiteColor];
+    self.eventTVB.hidden = YES;
     [self.view addSubview:self.eventTVB];
 }
 
@@ -260,7 +279,7 @@
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return self.eventArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
@@ -281,14 +300,100 @@
 - (void)configureCell:(CalendarTableViewCell *)cell
     forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-}
 
+    NSLog(@" ==== %@", [self.eventArray objectAtIndex:indexPath.row]);
+    PFObject *object = [self.eventArray objectAtIndex:indexPath.row];
+    PFFile *photo = object[@"Thumbnail"];
+    [cell setContentViewWithFrame:self.view.frame
+                         andTitle:[object objectForKey:@"Title"]
+                         andPhoto:photo];
+}
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    CalendarDetailViewController *detailVC = [storyboard instantiateViewControllerWithIdentifier:@"CalendarDetailViewController"];
+    detailVC.calendarObj = (PFObject *)[self.eventArray objectAtIndex:indexPath.row];
+    [self.navigationController pushViewController:detailVC animated:YES];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 50.0f;
+}
+
+#pragma mark - Fetch Data
+
+- (void)loadData
+{
+    NSDate *date = [NSDate date]; //I'm using this just to show the this is how you convert a date
     
+    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+    [df setDateStyle:NSDateFormatterLongStyle]; // day, Full month and year
+    
+    NSString *dateString = [df stringFromDate:date];
+    NSString *monthString = [[dateString componentsSeparatedByString:@" "] firstObject];
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Calendar"];
+    [query whereKey:@"Month" equalTo:monthString];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error)
+        {
+            //success
+            if (!error)
+            {
+                if (objects != nil && objects.count != 0)
+                {
+                    // success
+                    NSLog(@"%@", objects);
+                    _eventsByDate = [NSMutableDictionary new];
+                    self.eventArray = [NSMutableArray array];
+                    for (PFObject *obj in objects)
+                    {
+                        [self eventsParserWithObject:obj];
+                        [self.eventArray addObject:obj];
+                    }
+                    
+                    _calendarContentView.hidden = NO;
+                    _calendarMenuView.hidden = NO;
+                    self.eventTVB.hidden = NO;
+                    [self.eventTVB reloadData];
+                    [_calendarManager reload];
+                }
+                else
+                {
+                    // success but not found
+                }
+            }
+            else
+            {
+                // error
+            }
+        }
+        else
+        {
+            //error
+        }
+    }];
+}
+
+#pragma mark - Events Parser
+
+- (void)eventsParserWithObject:(PFObject *)obj
+{
+    NSString *key = [[self dateFormatter] stringFromDate:[obj objectForKey:@"StartDate"]];
+    
+    if(!_eventsByDate[key])
+    {
+        _eventsByDate[key] = [NSMutableArray new];
+    }
+    PFFile *photo = obj[@"Thumbnail"];
+    [_eventsByDate[key] addObject:[obj objectForKey:@"StartDate"]]; // DATE
+    [_eventsByDate[key] addObject:[obj objectForKey:@"Title"]]; // TITLE
+    [_eventsByDate[key] addObject:[obj objectForKey:@"Description"]]; // DESCRIPTION
+    
+    NSLog(@"EVENT : %@", _eventsByDate);
 }
 
 @end
