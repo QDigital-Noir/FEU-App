@@ -151,33 +151,49 @@
     {
         NSString *key = [NSString stringWithFormat:@"image%d", i + 1];
         PFFile *photo = self.calendarObj[key];
-        [photo getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
-            if (!error)
-            {
-                [self.photosArray addObject:[UIImage imageWithData:imageData]];
-                
-                if (counter != 5)
+        
+        if (photo != nil)
+        {
+            [photo getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
+                if (!error)
                 {
-                    counter++;
+                    [self.photosArray addObject:[UIImage imageWithData:imageData]];
+                    
+                    if (counter != 5)
+                    {
+                        counter++;
+                    }
+                    else
+                    {
+                        [self setupDetailView];
+                        [KVNProgress dismiss];
+                    }
                 }
                 else
                 {
-                    [self setupDetailView];
-                    [KVNProgress dismiss];
+                    if (counter != 5)
+                    {
+                        counter++;
+                    }
+                    else
+                    {
+                        [KVNProgress dismiss];
+                    }
                 }
+            }];
+        }
+        else
+        {
+            if (counter != 5)
+            {
+                counter++;
             }
             else
             {
-                if (counter != 5)
-                {
-                    counter++;
-                }
-                else
-                {
-                    [KVNProgress dismiss];
-                }
+                [self setupDetailViewWithoutImage];
+                [KVNProgress dismiss];
             }
-        }];
+        }
     }
 }
 

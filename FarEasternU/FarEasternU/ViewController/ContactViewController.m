@@ -22,6 +22,8 @@
     
     [self.tabbar setImage: [unselectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     [self.tabbar setSelectedImage: selectedImage];
+    
+    [self setupMainView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,5 +40,17 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - Setup View
+
+- (void)setupMainView
+{
+    self.view.backgroundColor = [UIColor colorWithRed:7/255.0f green:48/255.0f blue:126/255.0f alpha:1.0f];
+    self.detailTV.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+    NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"contact" ofType:@"html"];
+    NSString* htmlString = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
+    [self.detailTV loadHTMLString:htmlString baseURL:nil];
+    self.detailTV.backgroundColor = [UIColor colorWithRed:7/255.0f green:48/255.0f blue:126/255.0f alpha:1.0f];;
+}
 
 @end

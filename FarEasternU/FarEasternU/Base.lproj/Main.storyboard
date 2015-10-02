@@ -82,7 +82,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="isa-dx-4IU" style="IBUITableViewCellStyleDefault" id="tQQ-AI-7yz">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tQQ-AI-7yz" id="CVP-g7-5tw">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -475,6 +475,13 @@
                     <view key="view" contentMode="scaleToFill" id="VwK-En-ZQA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" id="gpi-Cb-wf1">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="มหาวิทยาลัยฟาร์อีสเทอร์น" id="kO7-4n-P3j">
@@ -502,12 +509,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="detailTV" destination="gpi-Cb-wf1" id="bcl-Vm-v6U"/>
                         <outlet property="tabbar" destination="NWv-YF-zBA" id="XAc-dg-6uS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="weT-TC-J8a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1275.2" y="1725.7733333333333"/>
+            <point key="canvasLocation" x="1275" y="1725"/>
         </scene>
         <!--Calendar Detail View Controller-->
         <scene sceneID="gT0-7s-X9q">

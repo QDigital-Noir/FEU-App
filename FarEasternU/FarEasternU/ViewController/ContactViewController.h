@@ -10,5 +10,6 @@
 
 @interface ContactViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITabBarItem *tabbar;
+@property (weak, nonatomic) IBOutlet UIWebView *detailTV;
 
 @end

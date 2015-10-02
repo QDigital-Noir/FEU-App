@@ -57,6 +57,7 @@
 		1091396B1B72E02200269DAD /* CourseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1091396A1B72E02200269DAD /* CourseDetailViewController.m */; };
 		1091396E1B72E3F400269DAD /* CourseMajorDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1091396D1B72E3F400269DAD /* CourseMajorDetailViewController.m */; };
 		10A53DBD1B94AD7D00F88DB5 /* NewsEventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A53DBC1B94AD7D00F88DB5 /* NewsEventTableViewCell.m */; };
+		10D43F1B1BBE047800FB826C /* contact.html in Resources */ = {isa = PBXBuildFile; fileRef = 10D43F1A1BBE047800FB826C /* contact.html */; settings = {ASSET_TAGS = (); }; };
 		10F542D71B7965BD0044508C /* nitate.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 10F542D61B7965BD0044508C /* nitate.jpg */; };
 		10F542ED1B7965E30044508C /* accounting.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 10F542E61B7965E30044508C /* accounting.jpg */; };
 		10F542EE1B7965E30044508C /* computer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 10F542E71B7965E30044508C /* computer.jpg */; };
@@ -183,6 +184,7 @@
 		1091396D1B72E3F400269DAD /* CourseMajorDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseMajorDetailViewController.m; sourceTree = "<group>"; };
 		10A53DBB1B94AD7D00F88DB5 /* NewsEventTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsEventTableViewCell.h; sourceTree = "<group>"; };
 		10A53DBC1B94AD7D00F88DB5 /* NewsEventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsEventTableViewCell.m; sourceTree = "<group>"; };
+		10D43F1A1BBE047800FB826C /* contact.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = contact.html; sourceTree = "<group>"; };
 		10F542D61B7965BD0044508C /* nitate.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nitate.jpg; sourceTree = "<group>"; };
 		10F542E61B7965E30044508C /* accounting.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = accounting.jpg; sourceTree = "<group>"; };
 		10F542E71B7965E30044508C /* computer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = computer.jpg; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 		1033BBAB1B5BFC8A0021BC92 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				10D43F1A1BBE047800FB826C /* contact.html */,
 				10F542C91B7960C70044508C /* Courses */,
 				1033BBBE1B5C72E50021BC92 /* Fonts */,
 			);
@@ -628,6 +631,7 @@
 				10F542EF1B7965E30044508C /* coop.jpg in Resources */,
 				1033BB911B5BA8480021BC92 /* Main.storyboard in Resources */,
 				1033BBDD1B5C73200021BC92 /* ThaiSansNeue-ExtraLightItal.ttf in Resources */,
+				10D43F1B1BBE047800FB826C /* contact.html in Resources */,
 				10F543111B796CB60044508C /* nitate.html in Resources */,
 				10F542FF1B7966420044508C /* ed.jpg in Resources */,
 				10F5431A1B796CCF0044508C /* tourism.html in Resources */,
