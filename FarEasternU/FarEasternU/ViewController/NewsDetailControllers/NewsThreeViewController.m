@@ -104,7 +104,7 @@
     forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     PFObject *object = [self.newsArray objectAtIndex:indexPath.row];
-    PFFile *photo = object[@"Thumbnail"];
+    PFFile *photo = object[@"NewsThumbnailPhoto"];
     [cell setContentViewWithFrame:self.view.frame
                          andTitle:[object objectForKey:@"NewsTitle"]
                          andPhoto:photo];
@@ -131,7 +131,7 @@
 {
     [KVNProgress showWithStatus:@"Loading"];
     PFQuery *newsQuery = [PFQuery queryWithClassName:@"News"];
-    [newsQuery whereKey:@"type" equalTo:[NSNumber numberWithInt:3]];
+    [newsQuery whereKey:@"NewsType" equalTo:[NSNumber numberWithInt:3]];
     [newsQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error)
         {

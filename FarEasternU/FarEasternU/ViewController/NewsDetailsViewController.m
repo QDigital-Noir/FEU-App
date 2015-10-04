@@ -74,7 +74,7 @@ const NSInteger kNumberOfImages = 12;
     self.detailLB.textColor = [UIColor blackColor];
     self.detailLB.textAlignment = NSTextAlignmentLeft;
     self.detailLB.numberOfLines = 0;
-    self.detailLB.text = [self.newsObj objectForKey:@"NewsDescription"];
+    self.detailLB.text = [self.newsObj objectForKey:@"NewsDetail"];
     [self.detailLB sizeToFit];
     
     [self.view addSubview:self.mainScrollView];
@@ -111,7 +111,7 @@ const NSInteger kNumberOfImages = 12;
     self.detailLB.textColor = [UIColor blackColor];
     self.detailLB.textAlignment = NSTextAlignmentLeft;
     self.detailLB.numberOfLines = 0;
-    self.detailLB.text = [self.newsObj objectForKey:@"NewsDescription"];
+    self.detailLB.text = [self.newsObj objectForKey:@"NewsDetail"];
     [self.detailLB sizeToFit];
     
     [self.view addSubview:self.mainScrollView];
@@ -144,8 +144,8 @@ const NSInteger kNumberOfImages = 12;
 {
     [KVNProgress showWithStatus:@"Loading"];
     self.dataArray = [NSMutableArray array];
-    PFQuery *detailQuery = [PFQuery queryWithClassName:@"NewsPhotos"];
-    [detailQuery whereKey:@"News" equalTo:self.newsObj];
+    PFQuery *detailQuery = [PFQuery queryWithClassName:@"NewsPhoto"];
+    [detailQuery whereKey:@"NewsID" equalTo:self.newsObj];
     [detailQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error)
         {

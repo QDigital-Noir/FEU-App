@@ -303,10 +303,8 @@
 
     NSLog(@" ==== %@", [self.eventArray objectAtIndex:indexPath.row]);
     PFObject *object = [self.eventArray objectAtIndex:indexPath.row];
-    PFFile *photo = object[@"Thumbnail"];
     [cell setContentViewWithFrame:self.view.frame
-                         andTitle:[object objectForKey:@"Title"]
-                         andPhoto:photo];
+                         andTitle:[object objectForKey:@"CalendarTitle"]];
 }
 #pragma mark - UITableViewDelegate
 
@@ -336,7 +334,7 @@
     NSString *monthString = [[dateString componentsSeparatedByString:@" "] firstObject];
     
     PFQuery *query = [PFQuery queryWithClassName:@"Calendar"];
-    [query whereKey:@"Month" equalTo:monthString];
+    [query whereKey:@"CalendarMonth" equalTo:monthString];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error)
         {
@@ -382,18 +380,30 @@
 
 - (void)eventsParserWithObject:(PFObject *)obj
 {
-    NSString *key = [[self dateFormatter] stringFromDate:[obj objectForKey:@"StartDate"]];
+    NSString *key = [[self dateFormatter] stringFromDate:[obj objectForKey:@"CalendarStartDate"]];
     
     if(!_eventsByDate[key])
     {
         _eventsByDate[key] = [NSMutableArray new];
     }
     PFFile *photo = obj[@"Thumbnail"];
-    [_eventsByDate[key] addObject:[obj objectForKey:@"StartDate"]]; // DATE
-    [_eventsByDate[key] addObject:[obj objectForKey:@"Title"]]; // TITLE
-    [_eventsByDate[key] addObject:[obj objectForKey:@"Description"]]; // DESCRIPTION
+    [_eventsByDate[key] addObject:[obj objectForKey:@"CalendarStartDate"]]; // DATE
+    [_eventsByDate[key] addObject:[obj objectForKey:@"CalendarTitle"]]; // TITLE
+    [_eventsByDate[key] addObject:[obj objectForKey:@"CalendarDetail"]]; // DESCRIPTION
     
     NSLog(@"EVENT : %@", _eventsByDate);
+}
+
+#pragma mark - Buttom Actions
+
+- (IBAction)homeTapped:(id)sender
+{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www2.feu.ac.th/thai/main.php"]];
+}
+
+- (IBAction)facebookTapped:(id)sender
+{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.facebook.com/FEUFriends"]];
 }
 
 @end

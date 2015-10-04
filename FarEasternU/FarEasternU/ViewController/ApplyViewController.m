@@ -177,4 +177,16 @@
     return view;
 }
 
+#pragma mark - Buttom Actions
+
+- (IBAction)homeTapped:(id)sender
+{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www2.feu.ac.th/thai/main.php"]];
+}
+
+- (IBAction)facebookTapped:(id)sender
+{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.facebook.com/FEUFriends"]];
+}
+
 @end

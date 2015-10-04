@@ -27,7 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = [self.calendarObj objectForKey:@"Title"];
+    self.title = [self.calendarObj objectForKey:@"CalendarTitle"];
     [self loadData];
 }
 
@@ -103,7 +103,7 @@
     self.titleLB.textColor = [UIColor blackColor];
     self.titleLB.textAlignment = NSTextAlignmentLeft;
     self.titleLB.numberOfLines = 0;
-    self.titleLB.text = [self.calendarObj objectForKey:@"Title"];
+    self.titleLB.text = [self.calendarObj objectForKey:@"CalendarTitle"];
     
     self.detailLB = [[UILabel alloc] initWithFrame:CGRectMake(10, self.titleLB.frame.origin.y + self.titleLB.frame.size.height + gap, self.view.frame.size.width - 20, self.view.frame.size.height)];
     self.detailLB.backgroundColor = [UIColor clearColor];
@@ -111,7 +111,7 @@
     self.detailLB.textColor = [UIColor blackColor];
     self.detailLB.textAlignment = NSTextAlignmentLeft;
     self.detailLB.numberOfLines = 0;
-    self.detailLB.text = [self.calendarObj objectForKey:@"Description"];
+    self.detailLB.text = [self.calendarObj objectForKey:@"CalendarDetail"];
     [self.detailLB sizeToFit];
     
     [self.view addSubview:self.mainScrollView];
@@ -141,60 +141,53 @@
 
 - (void)loadData
 {
-    // success
     [KVNProgress showWithStatus:@"Loading"];
-    
-    __block int counter = 1;
-    self.photosArray = [NSMutableArray array];
-    
-    for (int i = 0; i < 5; i++)
-    {
-        NSString *key = [NSString stringWithFormat:@"image%d", i + 1];
-        PFFile *photo = self.calendarObj[key];
-        
-        if (photo != nil)
+    self.dataArray = [NSMutableArray array];
+    PFQuery *detailQuery = [PFQuery queryWithClassName:@"CalendarPhoto"];
+    [detailQuery whereKey:@"CalendarID" equalTo:self.calendarObj];
+    [detailQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error)
         {
-            [photo getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
-                if (!error)
+            //success
+            if (!error)
+            {
+                if (objects != nil && objects.count != 0)
                 {
-                    [self.photosArray addObject:[UIImage imageWithData:imageData]];
-                    
-                    if (counter != 5)
+                    // success
+                    for (int i = 0; i < objects.count; i++)
                     {
-                        counter++;
-                    }
-                    else
-                    {
-                        [self setupDetailView];
-                        [KVNProgress dismiss];
+                        PFObject *obj = objects[i];
+                        PFFile *photo = obj[@"Photo"];
+                        [photo getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
+                            if (!error)
+                            {
+                                [self.dataArray addObject:[UIImage imageWithData:imageData]];
+                                if (self.dataArray.count == objects.count)
+                                {
+                                    [self setupDetailView];
+                                    [KVNProgress dismiss];
+                                }
+                            }
+                        }];
                     }
                 }
                 else
                 {
-                    if (counter != 5)
-                    {
-                        counter++;
-                    }
-                    else
-                    {
-                        [KVNProgress dismiss];
-                    }
+                    // success but not found
+                    [self setupDetailViewWithoutImage];
+                    [KVNProgress dismiss];
                 }
-            }];
-        }
-        else
-        {
-            if (counter != 5)
-            {
-                counter++;
             }
             else
             {
-                [self setupDetailViewWithoutImage];
-                [KVNProgress dismiss];
+                // error
             }
         }
-    }
+        else
+        {
+            //error
+        }
+    }];
 }
 
 @end

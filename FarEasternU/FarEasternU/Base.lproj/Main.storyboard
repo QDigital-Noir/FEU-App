@@ -119,6 +119,9 @@
                                 </state>
                                 <state key="selected" image="icon_home_selected"/>
                                 <state key="highlighted" image="icon_home_selected"/>
+                                <connections>
+                                    <action selector="homeTapped:" destination="dgU-gP-gRy" eventType="touchUpInside" id="5vC-vQ-hCF"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="3ID-o4-S0c">
@@ -130,6 +133,9 @@
                                 </state>
                                 <state key="selected" image="icon_facebook_selected"/>
                                 <state key="highlighted" image="icon_facebook_selected"/>
+                                <connections>
+                                    <action selector="facebookTapped:" destination="dgU-gP-gRy" eventType="touchUpInside" id="1Hi-5k-voE"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -346,6 +352,9 @@
                                 </state>
                                 <state key="selected" image="icon_home_selected"/>
                                 <state key="highlighted" image="icon_home_selected"/>
+                                <connections>
+                                    <action selector="homeTapped:" destination="pKP-28-mtw" eventType="touchUpInside" id="B26-1s-UWy"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="Vrp-SU-bET">
@@ -357,6 +366,9 @@
                                 </state>
                                 <state key="selected" image="icon_facebook_selected"/>
                                 <state key="highlighted" image="icon_facebook_selected"/>
+                                <connections>
+                                    <action selector="facebookTapped:" destination="pKP-28-mtw" eventType="touchUpInside" id="2Uo-j3-uR9"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -399,6 +411,9 @@
                                 </state>
                                 <state key="selected" image="icon_home_selected"/>
                                 <state key="highlighted" image="icon_home_selected"/>
+                                <connections>
+                                    <action selector="homeTapped:" destination="T6g-7L-0lg" eventType="touchUpInside" id="6Bx-cj-LYa"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="0IB-oe-2A3">
@@ -410,6 +425,9 @@
                                 </state>
                                 <state key="selected" image="icon_facebook_selected"/>
                                 <state key="highlighted" image="icon_facebook_selected"/>
+                                <connections>
+                                    <action selector="facebookTapped:" destination="T6g-7L-0lg" eventType="touchUpInside" id="pIa-Yg-kv1"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -494,6 +512,9 @@
                                 </state>
                                 <state key="selected" image="icon_home_selected"/>
                                 <state key="highlighted" image="icon_home_selected"/>
+                                <connections>
+                                    <action selector="homeTapped:" destination="RBs-bX-yyi" eventType="touchUpInside" id="Ml4-J9-1qI"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="SVs-NW-vm2">
@@ -505,6 +526,9 @@
                                 </state>
                                 <state key="selected" image="icon_facebook_selected"/>
                                 <state key="highlighted" image="icon_facebook_selected"/>
+                                <connections>
+                                    <action selector="facebookTapped:" destination="RBs-bX-yyi" eventType="touchUpInside" id="8yc-4g-XEc"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -5610,6 +5634,9 @@ Cgo
                                 </state>
                                 <state key="selected" image="icon_home_selected"/>
                                 <state key="highlighted" image="icon_home_selected"/>
+                                <connections>
+                                    <action selector="homeTapped:" destination="XLo-FI-qP1" eventType="touchUpInside" id="hqA-Ee-exA"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="gyw-fB-D1p">
@@ -5621,6 +5648,9 @@ Cgo
                                 </state>
                                 <state key="selected" image="icon_facebook_selected"/>
                                 <state key="highlighted" image="icon_facebook_selected"/>
+                                <connections>
+                                    <action selector="facebookTapped:" destination="XLo-FI-qP1" eventType="touchUpInside" id="PZt-29-hZl"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>

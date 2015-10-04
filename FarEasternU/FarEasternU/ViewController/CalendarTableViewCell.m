@@ -20,7 +20,7 @@
     // Configure the view for the selected state
 }
 
-- (void)setContentViewWithFrame:(CGRect)frame andTitle:(NSString *)title andPhoto:(PFFile *)photo
+- (void)setContentViewWithFrame:(CGRect)frame andTitle:(NSString *)title
 {
     self.titleLB = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, frame.size.width - 40, 60)];
     self.titleLB.backgroundColor = [UIColor clearColor];

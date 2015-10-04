@@ -53,4 +53,16 @@
     self.detailTV.backgroundColor = [UIColor colorWithRed:7/255.0f green:48/255.0f blue:126/255.0f alpha:1.0f];;
 }
 
+#pragma mark - Buttom Actions
+
+- (IBAction)homeTapped:(id)sender
+{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www2.feu.ac.th/thai/main.php"]];
+}
+
+- (IBAction)facebookTapped:(id)sender
+{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.facebook.com/FEUFriends"]];
+}
+
 @end

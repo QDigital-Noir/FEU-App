@@ -12,9 +12,11 @@
 
 @interface CorseViewController () <UITabBarDelegate>
 @property NSMutableArray *objects;
-@property NSArray *facultyArray;
-@property NSArray *facultyMasterArray;
 @property NSArray *courseTypeArray;
+@property NSArray *facultyArray;
+@property NSArray *facultyMasterArray;;
+@property NSMutableArray *dataArray;
+@property (nonatomic, strong) UIImageView *headerImageView;
 @end
 
 @implementation CorseViewController
@@ -22,15 +24,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    [self loadData];
     [self setupData];
     [self setupMainView];
-    
-//    UIImage *unselectedImage = [UIImage imageNamed:@"icon_corse"];
-//    UIImage *selectedImage = [UIImage imageNamed:@"icon_corse_selected"];
-//    
-//    [self.tabbar setImage: [unselectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
-//    [self.tabbar setSelectedImage: selectedImage];
     
     if (!expandedSections)
     {
@@ -95,11 +91,11 @@
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 181)];
     headerView.backgroundColor = [UIColor greenColor];
     
-    UIImageView *headerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, headerView.frame.size.width, 181)];
-    headerImageView.image = [UIImage imageNamed:@"header"];
-    headerImageView.contentMode = UIViewContentModeScaleToFill;
-    headerImageView.backgroundColor = [UIColor redColor];
-    [headerView addSubview:headerImageView];
+    self.headerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, headerView.frame.size.width, 181)];
+    self.headerImageView.image = [UIImage imageNamed:@"header"];
+    self.headerImageView.contentMode = UIViewContentModeScaleToFill;
+    self.headerImageView.backgroundColor = [UIColor redColor];
+    [headerView addSubview:self.headerImageView];
     
     [self.view addSubview:headerView];
 }
@@ -292,5 +288,79 @@
     return YES;
 }
 
+
+#pragma mark - Buttom Actions
+
+- (IBAction)homeTapped:(id)sender
+{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www2.feu.ac.th/thai/main.php"]];
+}
+
+- (IBAction)facebookTapped:(id)sender
+{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.facebook.com/FEUFriends"]];
+}
+
+#pragma mark - Load Data
+
+- (void)loadData
+{
+    self.dataArray = [NSMutableArray array];
+    PFQuery *query = [PFQuery queryWithClassName:@"Banners"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error)
+        {
+            //success
+            if (!error)
+            {
+                if (objects != nil && objects.count != 0)
+                {
+                    // success
+                    for (PFObject *obj in objects)
+                    {
+                        PFFile *photo = obj[@"BannerPhoto"];
+                        [photo getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
+                            if (!error)
+                            {
+                                [self.dataArray addObject:[UIImage imageWithData:imageData]];
+                                if (self.dataArray.count == objects.count)
+                                {
+                                    [self randomDisplayBanner];
+                                }
+                            }
+                        }];
+                    }
+                }
+                else
+                {
+                    // success but not found
+                }
+            }
+            else
+            {
+                // error
+            }
+        }
+        else
+        {
+            //error
+        }
+    }];
+}
+
+- (void)randomDisplayBanner
+{
+    //get random number
+    int number = (int)self.dataArray.count;
+    int randomImgNum = arc4random_uniform(number);
+    
+    //use your random number to get an image from your array
+    UIImage *tempImg = [self.dataArray objectAtIndex:randomImgNum];
+    
+    //add your UIImage to a UIImageView and place it on screen somewhere
+    self.headerImageView.image = tempImg;
+    
+    [self performSelector:@selector(randomDisplayBanner) withObject:nil afterDelay:5.0f];
+}
 
 @end
