@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 #import "DetailViewController.h"
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
+
 
 @interface AppDelegate () <UISplitViewControllerDelegate>
 
@@ -17,6 +20,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [Fabric with:@[[Crashlytics class]]];
+
     
     // [Optional] Power your app with Local Datastore. For more info, go to
     // https://parse.com/docs/ios_guide#localdatastore/iOS

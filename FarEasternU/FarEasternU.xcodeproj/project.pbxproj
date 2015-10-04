@@ -57,6 +57,8 @@
 		1091396B1B72E02200269DAD /* CourseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1091396A1B72E02200269DAD /* CourseDetailViewController.m */; };
 		1091396E1B72E3F400269DAD /* CourseMajorDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1091396D1B72E3F400269DAD /* CourseMajorDetailViewController.m */; };
 		10A53DBD1B94AD7D00F88DB5 /* NewsEventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A53DBC1B94AD7D00F88DB5 /* NewsEventTableViewCell.m */; };
+		10B936951BBEEE29001F3B14 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10B936931BBEEE29001F3B14 /* Fabric.framework */; settings = {ASSET_TAGS = (); }; };
+		10B936961BBEEE29001F3B14 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10B936941BBEEE29001F3B14 /* Crashlytics.framework */; settings = {ASSET_TAGS = (); }; };
 		10D43F1B1BBE047800FB826C /* contact.html in Resources */ = {isa = PBXBuildFile; fileRef = 10D43F1A1BBE047800FB826C /* contact.html */; settings = {ASSET_TAGS = (); }; };
 		10F542D71B7965BD0044508C /* nitate.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 10F542D61B7965BD0044508C /* nitate.jpg */; };
 		10F542ED1B7965E30044508C /* accounting.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 10F542E61B7965E30044508C /* accounting.jpg */; };
@@ -184,6 +186,8 @@
 		1091396D1B72E3F400269DAD /* CourseMajorDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseMajorDetailViewController.m; sourceTree = "<group>"; };
 		10A53DBB1B94AD7D00F88DB5 /* NewsEventTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsEventTableViewCell.h; sourceTree = "<group>"; };
 		10A53DBC1B94AD7D00F88DB5 /* NewsEventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsEventTableViewCell.m; sourceTree = "<group>"; };
+		10B936931BBEEE29001F3B14 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		10B936941BBEEE29001F3B14 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		10D43F1A1BBE047800FB826C /* contact.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = contact.html; sourceTree = "<group>"; };
 		10F542D61B7965BD0044508C /* nitate.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nitate.jpg; sourceTree = "<group>"; };
 		10F542E61B7965E30044508C /* accounting.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = accounting.jpg; sourceTree = "<group>"; };
@@ -226,6 +230,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				33A541B790E4438D4B474A73 /* libPods.a in Frameworks */,
+				10B936961BBEEE29001F3B14 /* Crashlytics.framework in Frameworks */,
+				10B936951BBEEE29001F3B14 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,6 +531,8 @@
 		B18790D52808AF736C9D64E6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				10B936931BBEEE29001F3B14 /* Fabric.framework */,
+				10B936941BBEEE29001F3B14 /* Crashlytics.framework */,
 				4BA04E74BEB2A4E1EE5B6074 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -542,6 +550,7 @@
 				1033BB7C1B5BA8470021BC92 /* Frameworks */,
 				1033BB7D1B5BA8470021BC92 /* Resources */,
 				03BC0B0B7403EF29D93615F8 /* Copy Pods Resources */,
+				10B936921BBEEDE9001F3B14 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -691,6 +700,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		10B936921BBEEDE9001F3B14 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 056c78cf20020e31b1ad0b1161eb01a88e17666b 49ead525f8cee48ed685d8fa3d45c92f6031d14088416d600d33fe3d675fe839";
 		};
 		5E90B833843CAA6C7B5AA7CC /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -880,6 +902,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Thanaporn Doungkamchan (AA292B4375)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Thanaporn Doungkamchan (AA292B4375)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "FarEasternU/FarEasternU-Prefix.pch";
 				INFOPLIST_FILE = FarEasternU/Info.plist;
@@ -956,6 +982,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Thanaporn Doungkamchan (AA292B4375)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Thanaporn Doungkamchan (AA292B4375)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "FarEasternU/FarEasternU-Prefix.pch";
 				INFOPLIST_FILE = FarEasternU/Info.plist;
